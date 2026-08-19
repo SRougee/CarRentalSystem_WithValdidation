@@ -53,12 +53,22 @@ namespace CarRentalSystem_WithValdidation
                 return;
             }
 
+            //Validate Rental Amount
+
+            if (!double.TryParse(txtRentalCost.Text,out double amount) || amount <= 0)
+            {
+                MessageBox.Show("A Valid amount larger than 0 must be entered",
+                                "Validation Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
+
             //---Name changing---
             string customerName = txtCustomerName.Text;
             string dateOut = dateRented.Value.ToShortDateString();
             string dateIn = dateReturned.Value.ToShortDateString();
-            string typecar = coboxTypeOfCar.SelectedItem.ToString();
-            string amount = txtRentalCost.Text; 
+            string typecar = coboxTypeOfCar.SelectedItem.ToString(); 
 
 
             //---MessageBox---
