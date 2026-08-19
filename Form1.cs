@@ -58,13 +58,15 @@ namespace CarRentalSystem_WithValdidation
             string dateOut = dateRented.Value.ToShortDateString();
             string dateIn = dateReturned.Value.ToShortDateString();
             string typecar = coboxTypeOfCar.SelectedItem.ToString();
+            string amount = txtRentalCost.Text; 
 
 
             //---MessageBox---
 
             MessageBox.Show($"Thank you {customerName} for renting from us \n" +
                             $"Car rented: {typecar}\n" +
-                            $"Rented Period:  {dateOut} to {dateIn}",
+                            $"Rented Period:  {dateOut} to {dateIn}\n" +
+                            $"The amount is R{amount}",
                             "Submitted",
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
@@ -75,8 +77,9 @@ namespace CarRentalSystem_WithValdidation
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            txtCustomerName.Text = "";
+            txtCustomerName.Text = string.Empty;
             coboxTypeOfCar.Text = string.Empty;
+            txtRentalCost.Text = string.Empty;
 
 
         }
