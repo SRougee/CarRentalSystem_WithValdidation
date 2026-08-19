@@ -22,7 +22,7 @@ namespace CarRentalSystem_WithValdidation
             //---Validate---
             //Validate the Customer name
 
-            if (string.IsNullOrEmpty(txtCustomerName.Text))
+            if (string.IsNullOrWhiteSpace(txtCustomerName.Text))
             {
                 MessageBox.Show("Custemer name is empty please enter a valid string.",
                                 "Validation Error",
@@ -44,7 +44,7 @@ namespace CarRentalSystem_WithValdidation
 
             //Validate the Type of car
 
-            if (string.IsNullOrEmpty(coboxTypeOfCar.Text))
+            if (string.IsNullOrWhiteSpace(coboxTypeOfCar.Text))
             {
                 MessageBox.Show("A type of car must be selected",
                                 "Validation Error",
@@ -68,7 +68,7 @@ namespace CarRentalSystem_WithValdidation
             string customerName = txtCustomerName.Text;
             string dateOut = dateRented.Value.ToShortDateString();
             string dateIn = dateReturned.Value.ToShortDateString();
-            string typecar = coboxTypeOfCar.SelectedItem.ToString(); 
+            string typecar = coboxTypeOfCar.SelectedItem?.ToString(); 
 
 
             //---MessageBox---

@@ -119,14 +119,17 @@
             // 
             // coboxTypeOfCar
             // 
+            this.coboxTypeOfCar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.coboxTypeOfCar.FormattingEnabled = true;
             this.coboxTypeOfCar.Items.AddRange(new object[] {
-            "Honda",
-            "Toyota",
             "Lada",
-            "Beetle",
             "Golf",
-            "Fox"});
+            "Fox",
+            "Jeta",
+            "Viper",
+            "Honda",
+            "BMW",
+            "Audi"});
             this.coboxTypeOfCar.Location = new System.Drawing.Point(51, 301);
             this.coboxTypeOfCar.Name = "coboxTypeOfCar";
             this.coboxTypeOfCar.Size = new System.Drawing.Size(183, 24);
