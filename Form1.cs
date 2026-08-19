@@ -22,20 +22,49 @@ namespace CarRentalSystem_WithValdidation
             //---Validate---
             //Validate the Customer name
 
-            
+            if (string.IsNullOrEmpty(txtCustomerName.Text))
+            {
+                MessageBox.Show("Custemer name is empty please enter a valid string.",
+                                "Validation Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error); 
+                return;
+            }
+
             //Validate Date in and Out
 
-
+            if (dateRented.Value.Date > dateReturned.Value.Date)
+            {
+                MessageBox.Show("Date Rented cannot be after the date returned.",
+                                "Validation Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
 
             //Validate the Type of car
 
+            if (string.IsNullOrEmpty(coboxTypeOfCar.Text))
+            {
+                MessageBox.Show("A type of car must be selected",
+                                "Validation Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
+
+            //---Name changing---
+            string customerName = txtCustomerName.Text;
+            string dateOut = dateRented.Value.ToShortDateString();
+            string dateIn = dateReturned.Value.ToShortDateString();
+            string typecar = coboxTypeOfCar.SelectedItem.ToString();
 
 
             //---MessageBox---
 
-            MessageBox.Show($"Thank you {txtCustomerName.Text} for renting from us \n" +
-                            $"Car rented: {coboxTypeOfCar.Text}\n" +
-                            $"Rented Period:  {dateRented.Text} to {dateReturned.Text}",
+            MessageBox.Show($"Thank you {customerName} for renting from us \n" +
+                            $"Car rented: {typecar}\n" +
+                            $"Rented Period:  {dateOut} to {dateIn}",
                             "Submitted",
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
