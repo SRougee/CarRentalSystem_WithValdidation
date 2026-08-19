@@ -40,6 +40,8 @@
             this.btnSubmit = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.txtRentalCost = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -160,11 +162,30 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // txtRentalCost
+            // 
+            this.txtRentalCost.Location = new System.Drawing.Point(414, 122);
+            this.txtRentalCost.Name = "txtRentalCost";
+            this.txtRentalCost.Size = new System.Drawing.Size(187, 22);
+            this.txtRentalCost.TabIndex = 13;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label6.Location = new System.Drawing.Point(390, 99);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(105, 18);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Rental Amount";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(721, 450);
+            this.Controls.Add(this.txtRentalCost);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSubmit);
@@ -198,6 +219,8 @@
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.TextBox txtRentalCost;
+        private System.Windows.Forms.Label label6;
     }
 }
 
